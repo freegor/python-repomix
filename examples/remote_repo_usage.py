@@ -10,8 +10,9 @@ from repomix import RepoProcessor, RepomixConfig, RepomixConfigOutput
 def main():
     # Create a processor instance with a remote repository URL
     remote_url = "https://github.com/AndersonBY/python-repomix.git"
+    branch_name = "main"
     config = RepomixConfig(output=RepomixConfigOutput(file_path="/tmp/repomix-output.md"))
-    processor = RepoProcessor(repo_url=remote_url, config=config)
+    processor = RepoProcessor(repo_url=remote_url, config=config, branch=branch_name)
 
     # Process the repository
     # By default, it will clone to a temporary directory
